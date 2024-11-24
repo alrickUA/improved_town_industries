@@ -96,7 +96,7 @@ tilelayout industry_layout_incinerator_5 {
 }
 
 /* Location check */
-switch (FEAT_INDUSTRIES, SELF, loc_check_incinerator, IsCity() && IsNearTown() && NoNearbyCompetitors(industry_incinerator, 100)) {1: return CB_RESULT_LOCATION_ALLOW; return CB_RESULT_LOCATION_DISALLOW;}
+switch (FEAT_INDUSTRIES, SELF, loc_check_incinerator, IsNearTown() && NoNearbyCompetitors(industry_incinerator, 100)) {1: return CB_RESULT_LOCATION_ALLOW; return CB_RESULT_LOCATION_DISALLOW;}
 
 /* Incinerator industry */
 item (FEAT_INDUSTRIES, industry_incinerator, 15) {
